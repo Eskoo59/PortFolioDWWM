@@ -1,0 +1,206 @@
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+
+
+
+/*------------Variables--------------*/
+:root{
+    --main-bg-color : white;
+    --text-color:black;
+}
+
+/*---------------KeyFrame------------------*/
+
+@keyframes appear {
+
+from{
+    opacity: 0;
+}
+
+to{
+    opacity: 1;
+}
+
+}
+
+/*-------------------ScrollBar--------------*/
+body::-webkit-scrollbar{
+    display: none;
+}
+
+html{
+    scrollbar-width: none;
+}
+/*------------------- Fonts -----------------*/
+@font-face {
+    font-family: "AlbraBold";  
+    src: url("fonts/FontsFree-Net-AlbraBold.ttf") format("truetype");  
+}
+
+@font-face {
+    font-family: "RoundKey";  
+    src: url("fonts/RoundkeySoft-Thin.ttf") format("truetype");  
+}
+/*----------------------------------*/
+
+body{
+    background-color: var(--main-bg-color);
+    display: flex;
+    width: 290vw;
+    color: var(--text-color);
+    position: relative;
+    height: 100vh;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.BigText{
+font-size: 120px;
+position: absolute;
+font-family: "AlbraBold";
+left: 30px;
+bottom: 20px;
+transition: text-shadow .3s linear;
+}
+
+.link{
+    text-decoration:none ;
+    color:var(--text-color);
+    font-size: 40px;
+    padding: 15px;
+    font-family: "RoundKey";
+}
+
+.Menu{
+    position: absolute;
+    top:28px;
+    left:220px;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 1500ms;
+}
+
+#Name{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 50px;
+    font-family: "AlbraBold";
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#themeButton{
+    position: absolute;
+    top:400px;
+    left:0px;
+    font-family: "RoundKey";
+    font-size: 50px;
+    transform: rotate(-90deg);
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 1500ms;
+}
+
+.changeThemeImg{
+    height: 30px;
+}
+
+
+#btn{
+    position: absolute;
+    /*top: 45px;*/
+    left: 100px; 
+    /*height: 25px;*/
+    width: 40px;
+    background-color:white ;
+    border: none;
+    font-size: 50px;
+    transform: rotate(-180deg);
+}
+
+#btn:hover{
+    cursor: pointer;
+}
+
+.BigText:hover{
+    text-shadow: 0.1em 0.1em #33333359;
+}
+
+#tech{
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    font-family: "Albrabold";
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-timing-function: ease-in; 
+    animation-fill-mode: forwards;
+    animation-delay: 3000ms;
+    opacity: 0;
+}
+
+#presentationText{
+    position: absolute;
+    font-family: "RoundKey";
+    font-size:25px;
+    top: 25%;
+    left: 3%;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#presentationText2{
+    position: absolute;
+    font-family: "RoundKey";
+    font-size:25px;
+    top: 30%;
+    left: 3%;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+
+#Name1{
+    font-family: "Albrabold";
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: absolute;
+    font-size:24px;
+    top: 27%;
+    left: 4.5%;
+}
+
+#DevWeb{
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+#techBackground{
+    background-color: black;
+}
