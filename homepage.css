@@ -82,7 +82,7 @@ transition: text-shadow .3s linear;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     opacity: 0;
-    animation-delay: 1500ms;
+    animation-delay: 1950ms;
 }
 
 #Name{
@@ -110,7 +110,7 @@ transition: text-shadow .3s linear;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     opacity: 0;
-    animation-delay: 1500ms;
+    animation-delay: 2200ms;
 }
 
 .changeThemeImg{
@@ -147,7 +147,7 @@ transition: text-shadow .3s linear;
     animation-duration: 2s;
     animation-timing-function: ease-in; 
     animation-fill-mode: forwards;
-    animation-delay: 3000ms;
+    animation-delay: 3500ms;
     opacity: 0;
 }
 
@@ -201,6 +201,39 @@ transition: text-shadow .3s linear;
     animation-fill-mode: forwards;
     opacity: 0;
 }
+
 #techBackground{
-    background-color: black;
+    background-color: var(--text-color);
+    position: absolute;
+    left: 25.8%;
+    top: 20%;
+    width: 8%;
+    height: 50%;
+    border-radius: 3px;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 4000ms;
+}
+
+div img{
+    position: absolute;
+    left: 30%;
+    cursor: pointer;
+    width: 70px;
+    height: 70px; 
+}
+
+div img:hover{
+    transform: scale(1.25);
+    transition-duration: 2s;
+}
+
+#Projet{
+    position: absolute;
+    font-family: "RoundKey";
+    left:38%;
+    top: 5%;
 }
