@@ -33,19 +33,3 @@ function changeTheme2()
     }
 }
 
-// Récupérer tous les liens de navigation
-const links = document.querySelectorAll('a');
-
-// Ajouter un gestionnaire d'événement de clic à chaque lien
-links.forEach(link => {
-  link.addEventListener('click', (event) => {
-    // Empêcher le comportement de clic par défaut
-    event.preventDefault();
-
-    // Récupérer la cible du lien
-    const target = document.querySelector(link.getAttribute('href'));
-
-    // Faire défiler jusqu'à la cible horizontalement
-    target.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-  });
-});

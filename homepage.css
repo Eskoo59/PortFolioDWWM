@@ -191,7 +191,7 @@ transition: text-shadow .3s linear;
     position: absolute;
     font-size:24px;
     top: 27%;
-    left: 4.5%;
+    left: 4.6%;
 }
 
 #DevWeb{
@@ -218,13 +218,56 @@ transition: text-shadow .3s linear;
     animation-delay: 4000ms;
 }
 
-div img{
+#firstImg{
     position: absolute;
-    left: 30%;
+    left: 15%;
+    top: 10%;
+    cursor: pointer;
+    width: 90px;
+    height: 90px; 
+    transition: transform 0.5s ease;
+}
+
+#secondImg{
+    position: absolute;
+    left: 70%;
+    top: 10%;
+    cursor: pointer;
+    width: 90px;
+    height: 90px; 
+    transition: transform 0.5s ease;
+}
+
+#thirdImg{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    cursor: pointer;
+    width: 90px;
+    height: 90px; 
+    transition: transform 0.5s ease;
+}
+
+#fourthImg{
+position: absolute;
+left: 15%;
+top: 70%;
+cursor: pointer;
+width: 90px;
+height: 90px; 
+transition: transform 0.5s ease;
+}
+
+#fiveImg{
+    position: absolute;
+    left: 70%;
+    top: 70%;
     cursor: pointer;
     width: 70px;
     height: 70px; 
+    transition: transform 0.5s ease;
 }
+
 
 div img:hover{
     transform: scale(1.25);
