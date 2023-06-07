@@ -274,9 +274,36 @@ div img:hover{
     transition-duration: 2s;
 }
 
-#Projet{
+#projet-ancre{
     position: absolute;
     font-family: "RoundKey";
     left:38%;
     top: 5%;
+}
+
+#contact-ancre{
+    position: absolute;
+    left: 75%;
+top: 5%;
+}
+
+
+.container{
+    background-color: var(--text-color);
+    height: 100px;
+    width: 100px;
+}
+
+#Pos{
+position:absolute;
+left : 50%;
+top: 20%;
+color: var(--main-bg-color);
+}
+
+#Pos1{
+position: absolute;
+left: 60%;
+top: 20%;
+color: var(--main-bg-color);
 }
