@@ -54,6 +54,7 @@ body{
     height: 100vh;
     overflow-y: hidden;
     scroll-behavior: smooth;
+    z-index: 0;
 }
 
 .BigText{
@@ -100,17 +101,14 @@ transition: text-shadow .3s linear;
 
 #themeButton{
     position: absolute;
-    top:400px;
-    left:0px;
-    font-family: "RoundKey";
-    font-size: 50px;
-    transform: rotate(-90deg);
     animation-name: appear;
     animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     opacity: 0;
     animation-delay: 2200ms;
+    top: 50%;
+    left: 30px;
 }
 
 .changeThemeImg{
@@ -120,14 +118,13 @@ transition: text-shadow .3s linear;
 
 #btn{
     position: absolute;
-    /*top: 45px;*/
-    left: 100px; 
-    /*height: 25px;*/
+    height: 25px;
     width: 40px;
-    background-color:white ;
     border: none;
     font-size: 50px;
-    transform: rotate(-180deg);
+    transform: rotate(-90deg);
+    background: none;
+    font-family: "Roundkey";
 }
 
 #btn:hover{
@@ -306,4 +303,9 @@ position: absolute;
 left: 60%;
 top: 20%;
 color: var(--main-bg-color);
+}
+
+#background-video{
+    z-index: -1;
+    height: 250%;
 }
