@@ -176,6 +176,42 @@ transition: text-shadow .3s linear;
     opacity: 0;
 }
 
+#presentationTextMain
+{
+    position: absolute;
+    font-family: "RoundKey";
+    font-size:25px;
+    top: 50%;
+    left: 3%;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#Knowledge{
+    font-family: "Albrabold";
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: absolute;
+    font-size:24px;
+}
+
+#Knowledge1{
+    font-family: "Albrabold";
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: absolute;
+    font-size:24px;
+}
 
 
 #Name1{
@@ -276,6 +312,7 @@ div img:hover{
     font-family: "RoundKey";
     left:38%;
     top: 5%;
+    font-size: 50px;
 }
 
 #contact-ancre{
@@ -296,16 +333,25 @@ position:absolute;
 left : 50%;
 top: 20%;
 color: var(--main-bg-color);
-width: 70px;
-height: 130px;
+width: 300px;
+height: 40%;
 border-radius: 3px;
+font-family: "AlbraBold";
+text-align: center;
+padding-top: 10px;
 }
 
 #Pos1{
 position: absolute;
 left: 60%;
 top: 20%;
+width: 300px;
+height: 40%;
 color: var(--main-bg-color);
+font-family: "AlbraBold";
+text-align: center;
+padding-top: 10px;
+border-radius: 3px;
 }
 
 #background-video{

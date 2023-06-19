@@ -48,6 +48,19 @@ function setLightTheme() {
   light = true;
 }
 
+
+function changeTheme2() {
+  if (light) {
+    setDarkTheme();
+    btn.style.color = "white";
+  } else {
+    setLightTheme();
+    btn.style.color = "black";
+  }
+  saveThemeToLocalStorage();
+}
+
+
 /* ------------ localStorage --------------- */
 function loadThemeFromLocalStorage() {
   const theme = localStorage.getItem("theme");
@@ -66,19 +79,7 @@ function saveThemeToLocalStorage() {
   }
 }
 
-/*-----------------------------------------*/
 
-
-function changeTheme2() {
-  if (light) {
-    setDarkTheme();
-    btn.style.color = "white";
-  } else {
-    setLightTheme();
-    btn.style.color = "black";
-  }
-  saveThemeToLocalStorage();
-}
 
 
 
