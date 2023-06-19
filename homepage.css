@@ -181,7 +181,7 @@ transition: text-shadow .3s linear;
     position: absolute;
     font-family: "RoundKey";
     font-size:25px;
-    top: 50%;
+    top: 20%;
     left: 3%;
     animation-name: appear;
     animation-duration: 1s;
@@ -361,7 +361,7 @@ border-radius: 3px;
 
 #github
 {
-    background-color: blue;
+    position: absolute;
     height: 30px;
     width: 30px;
 }
