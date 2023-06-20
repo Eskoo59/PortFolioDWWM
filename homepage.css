@@ -202,5 +202,11 @@ transition: text-shadow .3s linear;
     opacity: 0;
 }
 #techBackground{
+    position: absolute;
     background-color: black;
+    left: 25%;
+    top: 20%;
+    height: 30%;
+    width: 7%;
+    border-radius: 3px;
 }
