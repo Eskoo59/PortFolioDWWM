@@ -56,9 +56,10 @@ function setLightTheme() {
 function changeTheme2() {
   if (light) {
     setDarkTheme();
-
+    document.getElementById("github-logo").src = "image/githubDarkTheme.png";
   } else {
     setLightTheme();
+    document.getElementById("github-logo").src = "image/githubDayTheme.png";
   }
   saveThemeToLocalStorage();
 }
@@ -83,7 +84,7 @@ function saveThemeToLocalStorage() {
   }
 }
 
-
+/*----------------------------------------------------*/
 
 
 
