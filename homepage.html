@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +10,14 @@
 
 <body>
     <header>
-        <div>
+        <div role="group">
             <p id="Name">Ilies</p>
         </div>
         <div class="Menu">
-            <article>
+            <div role="navigation">
                 <a href="#projet-ancre" class="link">Mes Projets</a>
                 <a href="mailto:iliesbelmir@outlook.fr" class="link">Me contacter</a>
-            </article>
+        </div>
         </div>
     </header>
     <main>
@@ -30,10 +28,11 @@
             <button type="checkbox" id="btn">Thème</button>
         </div>
         <div id="github">
-            <a href="https://github.com/Eskoo59" target="_blank"><img src="image/githubDayTheme.png" loading="lazy" alt="github" id="github-logo"></a>
+            <a href="https://github.com/Eskoo59" target="_blank"><img src="image/githubDayTheme.png" loading="lazy"
+                    alt="github" id="github-logo"></a>
         </div>
-        <div id="Arrow">
-            <a href=""><img src="" id="ArrowChange"></a>
+        <div id="Arrow" role="button">
+            <a href=""><img src="#" id="ArrowChange" alt="Arrow"></a>
         </div>
         <span id="presentationText">
             Bienvenue sur mon site vitrine !<br>
@@ -43,14 +42,17 @@
             envers moi meme<br> et a chercher toujours plus loin quand je ne trouve pas de solution a mes problemes.
         </span>
         <span id="presentationTextMain">
-            Je suis toujours a la recherche de nouvelles</span> <span id="Knowledge"> connaissance </span><span id="presentationTextMain2"> et je fais preuve d'une grande</span>
-            <span id="Knowledge1" > persévérance !</span> 
+            Je suis toujours a la recherche de nouvelles</span> <span id="Knowledge"> connaissance </span><span
+            id="presentationTextMain2"> et je fais preuve d'une grande</span>
+        <span id="Knowledge1"> persévérance !</span>
+        <span id="PresentationText3">Je t'invite a parcourir mon site pour voir les différents</span><span id="ProjetText"> Projets</span>
+        <span id="PresentationText4"> auquels j'ai pu participer !</span>
         <div id="tech">
             Voici les technologies que j'ai utilisée et apprise pendant mon cursus
         </div>
         <div id="techBackground">
             <a href="https://developer.mozilla.org/fr/docs/Glossary/HTML5" target="_blank"><img
-                    src="image/Colorhtml.png" loading="lazy" id="firstImg"  alt="image"></a>
+                    src="image/Colorhtml.png" loading="lazy" id="firstImg" alt="image"></a>
             <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference" target="_blank"><img
                     src="image/Colorcss.png" loading="lazy" id="secondImg" alt="image"></a>
             <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><img src="image/Colorjs.png"
@@ -62,26 +64,24 @@
         <div class="BigText">
             <span id="DevWeb"> Développeur Web.</span>
         </div>
-     </main>
-        <h2 id="projet-ancre">
-            Mes Projets
-        </h2>
-        <section>
-            <div class="container" id="Pos">
-                Dé a six chiffre aléatoire
-            </div>
-            <div class="container" id="Pos1">
-              Boutique d'e-commerce 
-               <p>EN COURS ...</p>
-            </div>
-            <div class="container" id="Pos2">
-                Juste prix 
-                <p>EN COURS ...</p>
-            </div>
-        </section>
-        <div id="contact-ancre"></div>
     </main>
-    <footer></footer>
+    <h2 id="projet-ancre">
+        Mes Projets
+    </h2>
+    <div role="group">
+        <div class="container" id="Pos">
+            Dé a six chiffre aléatoire
+        </div>
+        <div class="container" id="Pos1">
+            Boutique d'e-commerce
+            <p>EN COURS ...</p>
+        </div>
+        <div class="container" id="Pos2">
+            Juste prix
+            <p>EN COURS ...</p>
+        </div>
+    </div>
+    <div id="contact-ancre"></div>
 </body>
 
 </html>

@@ -3,12 +3,6 @@
     margin: 0;
     box-sizing: border-box;}
 
-*{
-   /* box-shadow: 0 0 0 3px red
-    inset;*/
-}
-
-
 /*------------Variables--------------*/
 :root{
     --main-bg-color : white;
@@ -200,7 +194,7 @@ transition: text-shadow .3s linear;
     font-family: "RoundKey";
     font-size:25px;
     top: 50%;
-    left: 11.4%;
+    left: 13.4%;
     animation-name: appear;
     animation-duration: 1s;
     animation-timing-function: ease-in;
@@ -208,6 +202,47 @@ transition: text-shadow .3s linear;
     animation-fill-mode: forwards;
     opacity: 0;
 } 
+
+#PresentationText3{
+    position: absolute;
+    font-family: "RoundKey";
+    font-size:25px;
+    top: 70%;
+    left: 3%;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+} 
+
+#PresentationText4{
+    position: absolute;
+    font-family: "RoundKey";
+    font-size:25px;
+    top: 70.1%;
+    left: 13.5%;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+} 
+
+#ProjetText{
+    font-family: "Albrabold";
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: absolute;
+    font-size:24px;
+    top: 69.7%;
+    left: 11.5%;
+}
 
 
 #Knowledge{
@@ -220,7 +255,7 @@ transition: text-shadow .3s linear;
     position: absolute;
     font-size:24px;
     top: 49.5%;
-    left: 8.5%;
+    left: 9.8%;
 }
 
 #Knowledge1{
@@ -233,7 +268,7 @@ transition: text-shadow .3s linear;
     position: absolute;
     font-size:24px;
     top: 49.5%;
-    left: 15.2%;
+    left: 18.2%;
 }
 
 
@@ -247,7 +282,7 @@ transition: text-shadow .3s linear;
     position: absolute;
     font-size:24px;
     top: 27.2%;
-    left: 4.6%;
+    left: 5%;
 }
 
 #DevWeb{
@@ -409,3 +444,4 @@ border-radius: 3px;
     top: 3%;
     left: 40%;
 }
+
