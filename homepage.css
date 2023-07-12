@@ -445,3 +445,66 @@ border-radius: 3px;
     left: 40%;
 }
 
+/* --------------- Responsive ------------------*/
+
+
+
+@media only screen and (max-width : 1280px) {
+    body{
+        width:240vw ;
+    }
+    #github{
+        left: 39%;
+    }
+    #Arrow{
+        left: 39%;
+    }
+    #presentationText{
+        left: 4%;
+    }
+    #Name1{
+        left: 7%;
+    }
+    #presentationText2{
+        left: 4%;
+        top:30.5% ;
+    }
+    #presentationTextMain{
+        left: 4%;
+    }
+    #Knowledge{
+    left: 13.8%;
+    }
+    #presentationTextMain2{
+        top: 60%;
+        left: 6%;
+    }
+    #Knowledge1{
+        top: 60%;
+        left: 12.8%;
+    }
+    #PresentationText3{
+        left: 4%;
+    }
+    #PresentationText4{
+        left: 19%;
+    }
+    #ProjetText{
+        left: 16.2%;
+    }
+    #techBackground{
+        left: 28%;
+        width: 13%;
+        height: 50%;
+    }
+    #tech{
+        left: 24%;
+    }
+    }
+    
+
+
+    /*--------Tablettes -------------*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+}
