@@ -1,7 +1,6 @@
 "use strict";
 
 /* --------------- Left Scrolling viewport ----------*/
-
 document.documentElement.scrollTop = 0;
 const scrollContainer = document.querySelector("body");
 

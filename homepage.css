@@ -3,17 +3,17 @@
     margin: 0;
     box-sizing: border-box;}
 
-*{
-   /* box-shadow: 0 0 0 3px red
-    inset;*/
-}
-
 
 /*------------Variables--------------*/
 :root{
     --main-bg-color : white;
     --text-color:black;
 }
+
+
+/*-------------- Responsive --------- */
+
+
 
 /*---------------KeyFrame------------------*/
 
@@ -409,3 +409,4 @@ border-radius: 3px;
     top: 3%;
     left: 40%;
 }
+
