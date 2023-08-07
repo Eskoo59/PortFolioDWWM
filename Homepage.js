@@ -1,16 +1,14 @@
 "use strict";
 
-/* --------------- Left Scrolling viewport ----------*/
+// Empêcher le défilement vertical par défaut et activer le défilement horizontal du viewport
 document.documentElement.scrollTop = 0;
 const scrollContainer = document.querySelector("body");
 
 document.addEventListener("wheel", (evt) => {
-  /* evt.preventDefault();*/
+  /* evt.preventDefault(); */
   /*console.log(evt.deltaY, document.body.scrollLeft);*/
   document.documentElement.scrollLeft += evt.deltaY;
 });
-
-/*-------------------------Theme Change------------------------------ */
 
 const btn = document.querySelector("#btn");
 btn.addEventListener("click", changeTheme2);
@@ -19,65 +17,54 @@ let light = true;
 loadThemeFromLocalStorage();
 
 function changeTheme2() {
+  // Si le thème est clair, appeler la fonction pour définir le thème sombre, sinon, définir le thème clair
   if (light) {
-    setDarkTheme();
+    setTheme("dark", "#000000", "#FFFFFF", "image/vecteezy_colourful-particle-moving-on-balck-background-blue-smoke_7515486_420.mp4", "image/githubDarkTheme.png", "image/ArrowDarkTheme.png");
   } else {
-    setLightTheme();
+    setTheme("light", "#FFFFFF", "#000000", "image/white_background_-_92723 (Original).mp4", "image/githubDayTheme.png", "image/ArrowWhiteTheme.png");
   }
+  // Inverser la valeur de "light" pour alterner entre les thèmes
+  light = !light;
+  // Sauvegarder le thème choisi dans le Local Storage
   saveThemeToLocalStorage();
 }
 
-function setDarkTheme() {
-  document.documentElement.style.setProperty("--main-bg-color", "#000000");
-  document.documentElement.style.setProperty("--text-color", "#FFFFFF");
-  document.querySelector("#background-video source").src =
-    "image/vecteezy_colourful-particle-moving-on-balck-background-blue-smoke_7515486_420.mp4";
+function setTheme(theme, bgColor, textColor, videoSrc, githubImgSrc, arrowImgSrc) {
+  // Mettre à jour les variables CSS personnalisées avec les couleurs du thème choisi
+  document.documentElement.style.setProperty("--main-bg-color", bgColor);
+  document.documentElement.style.setProperty("--text-color", textColor);
+  // Mettre à jour la source de la vidéo de fond avec celle du thème choisi
+  document.querySelector("#background-video source").src = videoSrc;
   const video = document.querySelector("#background-video");
 
-  btn.style.color = "white";
+  // Mettre à jour la couleur du bouton avec la couleur du texte du thème choisi
+  btn.style.color = textColor;
+  // Mettre à jour l'image du logo GitHub avec celle du thème choisi
+  document.getElementById("github-logo").src = githubImgSrc;
+  // Mettre à jour l'image de la flèche avec celle du thème choisi
+  document.getElementById("ArrowChange").src = arrowImgSrc;
+
+  // Recharger et lire la vidéo de fond avec le nouveau thème
   video.load();
   video.play();
-  light = false;
 }
 
-function setLightTheme() {
-  document.documentElement.style.setProperty("--main-bg-color", "#FFFFFF");
-  document.documentElement.style.setProperty("--text-color", "#000000");
-  document.querySelector("#background-video source").src =
-    "image/white_background_-_92723 (Original).mp4";
-  const video = document.querySelector("#background-video");
+/* ------------ Local Storage --------------- */
 
-  btn.style.color = "black";
-  video.load();
-  video.play();
-  light = true;
-}
-
-function changeTheme2() {
-  if (light) {
-    setDarkTheme();
-    document.getElementById("github-logo").src = "image/githubDarkTheme.png";
-    document.getElementById("ArrowChange").src = "image/ArrowDarkTheme.png";
-  } else {
-    setLightTheme();
-    document.getElementById("github-logo").src = "image/githubDayTheme.png";
-    document.getElementById("ArrowChange").src = "image/ArrowWhiteTheme.png";
-  }
-  saveThemeToLocalStorage();
-}
-
-/* ------------ localStorage --------------- */
-
+// Charger le thème enregistré dans le Local Storage (s'il existe)
 function loadThemeFromLocalStorage() {
   const theme = localStorage.getItem("theme");
+  // Si le thème est sombre, appeler la fonction pour définir le thème sombre, sinon, définir le thème clair
   if (theme === "dark") {
-    setDarkTheme();
+    setTheme("dark", "#000000", "#FFFFFF", "image/vecteezy_colourful-particle-moving-on-balck-background-blue-smoke_7515486_420.mp4", "image/githubDarkTheme.png", "image/ArrowDarkTheme.png");
   } else {
-    setLightTheme();
+    setTheme("light", "#FFFFFF", "#000000", "image/white_background_-_92723 (Original).mp4", "image/githubDayTheme.png", "image/ArrowWhiteTheme.png");
   }
 }
 
+// Sauvegarder le thème choisi dans le Local Storage
 function saveThemeToLocalStorage() {
+  // Si le thème est clair, supprimer l'entrée "theme" du Local Storage, sinon, enregistrer le thème sombre
   if (light) {
     localStorage.removeItem("theme");
   } else {
@@ -85,4 +72,3 @@ function saveThemeToLocalStorage() {
   }
 }
 
-/*----------------------------------------------------*/
