@@ -1,15 +1,26 @@
 "use strict";
 
 // Empêcher le défilement vertical par défaut et activer le défilement horizontal du viewport
-document.documentElement.scrollTop = 0;
 const scrollContainer = document.querySelector("body");
-
-document.addEventListener("wheel", (evt) => {
-   evt.preventDefault(); 
-  /*console.log(evt.deltaY, document.body.scrollLeft);*/
+// code javascript pour désactiver mon scroll horizontal en dessous d'un certain nombre de pixel
+const mediaQuery = window.matchMedia(MediaQueryList);
+checkSize();
+window.addEventListener("resize", checkSize);
+function checkSize() {
+  if (!window.matchMedia("(max-width: 1024px)").matches) {
+    document.removeEventListener("wheel", startScroll);
+    document.documentElement.scrollTop = 0;
+    document.addEventListener("wheel", startScroll);
+  } else {
+    document.removeEventListener("wheel", startScroll);
+  }
+}
+function startScroll(evt) {
+  evt.preventDefault();
+  console.log(evt.deltaY, document.body.scrollLeft);
   document.documentElement.scrollLeft += evt.deltaY;
-});
-
+}
+// ---------------------------------------
 const btn = document.querySelector("#btn");
 btn.addEventListener("click", changeTheme2);
 
@@ -19,9 +30,23 @@ loadThemeFromLocalStorage();
 function changeTheme2() {
   // Si le thème est clair, appeler la fonction pour définir le thème sombre, sinon, définir le thème clair
   if (light) {
-    setTheme("dark", "#000000", "#FFFFFF", "image/vecteezy_colourful-particle-moving-on-balck-background-blue-smoke_7515486_420.mp4", "image/githubDarkTheme.png", "image/ArrowDarkTheme.png");
+    setTheme(
+      "dark",
+      "#000000",
+      "#FFFFFF",
+      "image/vecteezy_colourful-particle-moving-on-balck-background-blue-smoke_7515486_420.mp4",
+      "image/githubDarkTheme.png",
+      "image/ArrowDarkTheme.png"
+    );
   } else {
-    setTheme("light", "#FFFFFF", "#000000", "image/white_background_-_92723 (Original).mp4", "image/githubDayTheme.png", "image/ArrowWhiteTheme.png");
+    setTheme(
+      "light",
+      "#FFFFFF",
+      "#000000",
+      "image/white_background_-_92723 (Original).mp4",
+      "image/githubDayTheme.png",
+      "image/ArrowWhiteTheme.png"
+    );
   }
   // Inverser la valeur de "light" pour alterner entre les thèmes
   light = !light;
@@ -29,7 +54,14 @@ function changeTheme2() {
   saveThemeToLocalStorage();
 }
 
-function setTheme(theme, bgColor, textColor, videoSrc, githubImgSrc, arrowImgSrc) {
+function setTheme(
+  theme,
+  bgColor,
+  textColor,
+  videoSrc,
+  githubImgSrc,
+  arrowImgSrc
+) {
   // Mettre à jour les variables CSS personnalisées avec les couleurs du thème choisi
   document.documentElement.style.setProperty("--main-bg-color", bgColor);
   document.documentElement.style.setProperty("--text-color", textColor);
@@ -56,9 +88,23 @@ function loadThemeFromLocalStorage() {
   const theme = localStorage.getItem("theme");
   // Si le thème est sombre, appeler la fonction pour définir le thème sombre, sinon, définir le thème clair
   if (theme === "dark") {
-    setTheme("dark", "#000000", "#FFFFFF", "image/vecteezy_colourful-particle-moving-on-balck-background-blue-smoke_7515486_420.mp4", "image/githubDarkTheme.png", "image/ArrowDarkTheme.png");
+    setTheme(
+      "dark",
+      "#000000",
+      "#FFFFFF",
+      "image/vecteezy_colourful-particle-moving-on-balck-background-blue-smoke_7515486_420.mp4",
+      "image/githubDarkTheme.png",
+      "image/ArrowDarkTheme.png"
+    );
   } else {
-    setTheme("light", "#FFFFFF", "#000000", "image/white_background_-_92723 (Original).mp4", "image/githubDayTheme.png", "image/ArrowWhiteTheme.png");
+    setTheme(
+      "light",
+      "#FFFFFF",
+      "#000000",
+      "image/white_background_-_92723 (Original).mp4",
+      "image/githubDayTheme.png",
+      "image/ArrowWhiteTheme.png"
+    );
   }
 }
 
@@ -71,4 +117,3 @@ function saveThemeToLocalStorage() {
     localStorage.setItem("theme", "dark");
   }
 }
-
