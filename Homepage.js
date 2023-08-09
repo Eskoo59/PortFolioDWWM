@@ -5,7 +5,7 @@ document.documentElement.scrollTop = 0;
 const scrollContainer = document.querySelector("body");
 
 document.addEventListener("wheel", (evt) => {
-  /* evt.preventDefault(); */
+   evt.preventDefault(); 
   /*console.log(evt.deltaY, document.body.scrollLeft);*/
   document.documentElement.scrollLeft += evt.deltaY;
 });
